@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wedding of Miya & Riyan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@300;400&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <audio id="weddingMusic" loop>
+        <source src="musik.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="gatekeeper" class="gatekeeper-overlay">
+        <div class="gatekeeper-content">
+            <p class="opening">THE WEDDING OF</p>
+            <h1>Miya & Riyan</h1>
+            <p class="date-preview">20 . 08 . 2026</p>
+            <button onclick="bukaUndangan()">Buka Undangan</button>
+        </div>
+    </div>
+
+    <main id="main-content" class="hidden">
+        
+        <section class="hero-section">
+            <div class="hero-text">
+                <p class="sub-title">Save the Date</p>
+                <h2>Miya & Riyan</h2>
+                <p class="date">Kamis, 20 Agustus 2026</p>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <h3>Galeri Prewedding</h3>
+            <p class="gallery-sub">Momen kebahagiaan kami</p>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="prewed1.jpg" alt="Prewedding 1"></div>
+                <div class="gallery-item"><img src="prewed2.jpg" alt="Prewedding 2"></div>
+                <div class="gallery-item"><img src="prewed3.jpg" alt="Prewedding 3"></div>
+            </div>
+        </section>
+
+        <button id="musicToggle" class="music-control-btn" onclick="toggleMusic()">🎵 Pause</button>
+
+    </main>
+
+    <script>
+        const music = document.getElementById('weddingMusic');
+        const gatekeeper = document.getElementById('gatekeeper');
+        const mainContent = document.getElementById('main-content');
+        const musicBtn = document.getElementById('musicToggle');
+
+        function bukaUndangan() {
+            gatekeeper.style.display = 'none';
+            mainContent.classList.remove('hidden');
+            music.play().catch(error => console.log("Autoplay diblokir:", error));
+        }
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                musicBtn.innerText = "🎵 Pause";
+            } else {
+                music.pause();
+                musicBtn.innerText = "🔇 Play";
+            }
+        }
+    </script>
+</body>
+</html>
