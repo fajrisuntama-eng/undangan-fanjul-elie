@@ -1,0 +1,153 @@
+/* Reset & Font Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f2eb; /* Tema warna cream / earth tone */
+    color: #4a4a4a;
+    overflow-x: hidden;
+}
+
+/* Halaman Cover / Gatekeeper */
+.gatekeeper-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('prewed1.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.gatekeeper-content .opening {
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.gatekeeper-content h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.gatekeeper-content .date-preview {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.gatekeeper-content button {
+    padding: 12px 28px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    background-color: #bc987e; /* Warna aksen tema cokelat estetis */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+/* Menyembunyikan konten utama sebelum undangan dibuka */
+.hidden { display: none; }
+
+/* Hero Section (Halaman Utama Setelah Dibuka) */
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(rgba(245,242,235,0.85), rgba(245,242,235,0.85)), url('prewed1.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-text .sub-title {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: #8c6f5a;
+    margin-bottom: 15px;
+}
+
+.hero-text h2 {
+    font-family: 'Sacramento', cursive;
+    font-size: 4.5rem;
+    color: #5c4738;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.hero-text .date {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: #6e5546;
+}
+
+/* Bagian Galeri Foto Prewedding */
+.gallery-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.gallery-section h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    color: #5c4738;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.gallery-sub {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #8c6f5a;
+    margin-bottom: 40px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover; /* Menjaga proporsi foto HP agar tidak gepeng atau ketarik */
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* Tombol Kontrol Musik Melayang di HP */
+.music-control-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+    padding: 12px 20px;
+    background-color: rgba(92, 71, 56, 0.85);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    backdrop-filter: blur(4px); /* Efek blur estetik pada tombol di HP */
+}
